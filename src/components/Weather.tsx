@@ -88,7 +88,6 @@ export const Weather :React.FC = () => {
         return{searchWeather}
 
     }catch(error){
-        console.error('no data');
         throw error
 
     }}
@@ -103,7 +102,6 @@ export const Weather :React.FC = () => {
             setErrorMessage(null);
             updateRecentSearches(SearchLocation);
         }catch(error){
-            console.log('no results');
             setweatherInfo(null); // Reset weatherInfo to clear previous data
             setErrorMessage('Location not found. Please enter a valid location.');
         }
